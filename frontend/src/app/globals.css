@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
+
+
+  :root {
+    --background-start-rgb: 0,0,0;
+    --background-end-rgb: 255,255,255;
+    --foreground-rgb: 214,219,255;
+  }
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-start-rgb: 0,0,0;
+    --background-end-rgb: 0,0,0;
+    --foreground-rgb: 255,255,255;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-end-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-warp :balance;
+  }
+}
+
+::-webkit-scrollbar{
+  w: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}

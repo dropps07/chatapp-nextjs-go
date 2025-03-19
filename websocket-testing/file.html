@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h1>WebSocket Test</h1>
+  <div id="status">Connecting...</div>
+  <script>
+    const socket = new WebSocket('ws://localhost:8080/ws?userID=testuser');
+    
+    socket.onopen = () => {
+      document.getElementById('status').textContent = 'Connected!';
+    };
+    
+    socket.onerror = (error) => {
+      document.getElementById('status').textContent = 'Error connecting!';
+      console.error(error);
+    };
+    
+    socket.onclose = (event) => {
+      document.getElementById('status').textContent = `Closed (${event.code})`;
+    };
+  </script>
+</body>
+</html>
