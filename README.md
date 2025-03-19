@@ -8,7 +8,7 @@ install libraries : framer-motion, next-font, etc
 to run it locally:
 npm run dev
 ```
-# Screen Shots
+# Screenshots
 
 ![Screenshot 2025-03-19 152304](https://github.com/user-attachments/assets/092a060c-515c-4410-bf23-504f757d08ab)
 
